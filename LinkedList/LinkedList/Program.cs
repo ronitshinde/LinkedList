@@ -16,7 +16,7 @@ namespace LinkedList
             {
                 Console.WriteLine();
                 Console.WriteLine("Please enter an option");
-                Console.WriteLine("1.Create Simple Linked List");
+                Console.WriteLine("1.Create Simple Linked List \n2.Create Linked List By Adding Data");
                 Console.WriteLine();
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
@@ -28,6 +28,9 @@ namespace LinkedList
                         linkedlist.Add(70);
                         break;
                     case 2:
+                        linkedlist.Display();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                     default:
