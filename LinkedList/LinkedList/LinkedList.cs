@@ -9,9 +9,9 @@ namespace LinkedList
     public class LinkedList
     {
         public Node head;
-        public void Add(int data)
+        public void Add(int dataValue)
         {
-            Node node = new Node(data);
+            Node node = new Node(dataValue);
             if (this.head == null)
             {
                 this.head = node;
@@ -25,7 +25,7 @@ namespace LinkedList
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} : inserted into linked list", node.data);
+            Console.WriteLine("{0} : inserted into linked list", node.dataIn);
         }
         public void Display()
         {
