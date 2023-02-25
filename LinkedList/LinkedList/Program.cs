@@ -16,7 +16,7 @@ namespace LinkedList
             {
                 Console.WriteLine();
                 Console.WriteLine("Please enter an option");
-                Console.WriteLine("1.Create Simple Linked List \n2.Create Linked List By Adding Data \n3.Exit Creating Linked List");
+                Console.WriteLine("1.Create Simple Linked List \n2.Create Linked List By Reversing Data \n3 Display Linked List By Adding Data \n4.Exit Creating Linked List");
                 Console.WriteLine();
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
@@ -28,6 +28,14 @@ namespace LinkedList
                         linkedlist.Add(56);
                         break;
                     case 2:
+                        linkedlist.ReverseOrder(56);
+                        linkedlist.ReverseOrder(30);
+                        linkedlist.ReverseOrder(70);
+                        break;
+                    case 3:
+                        linkedlist.Display();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:
