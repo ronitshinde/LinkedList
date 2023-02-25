@@ -8,11 +8,11 @@ namespace LinkedList
 {
     public class Node
     {
-        public int data;
+        public int dataIn;
         public Node next;
         public Node(int data)
         {
-            this.data = data;
+            this.dataIn = data;
         }
     }
 }
