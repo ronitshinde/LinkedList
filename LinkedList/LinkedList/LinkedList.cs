@@ -106,5 +106,44 @@ namespace LinkedList
                     Console.WriteLine($"{value} is not present in List");
             }
         }
+        public void Size()
+        {
+            Node temp = headNode;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List Is Empty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.dataIn + " ");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine();
+            Console.WriteLine("Total No Of Count : " + count);
+        }
+        public void AdditionAfterElement(int afterData, int data)
+        {
+            Node newNode = new Node(data);
+            if (this.headNode == null)
+                this.headNode = newNode;
+            else
+            {
+                Node tempNode = headNode;
+                while (tempNode.dataIn != afterData)
+                {
+                    tempNode = tempNode.next;
+                }
+                if (tempNode.dataIn == afterData)
+                {
+                    Node afterNode = tempNode.next;
+                    tempNode.next = newNode;
+                    newNode.next = afterNode;
+                }
+                else
+                    Console.WriteLine(" Data not found ");
+            }
+        }
     }
 }
