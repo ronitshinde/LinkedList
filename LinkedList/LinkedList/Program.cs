@@ -17,7 +17,7 @@ namespace LinkedList
             {
                 Console.WriteLine();
                 Console.WriteLine("Please enter an option");
-                Console.WriteLine("1.Create Simple Linked List \n2.Create Linked List By Reversing Data \n3.Delete The First Node \n4.Delete The Last Node \n5.Searching The Element \n6.Display Linked List By Adding Data \n7.Exit Creating Linked List");
+                Console.WriteLine("1.Create Simple Linked List \n2.Create Linked List By Reversing Data \n3.Delete The First Node \n4.Delete The Last Node \n5.Searching The Element \n6.Inserting The Element After A Element \n7.Display Linked List By Adding Data \n8.Exit Creating Linked List");
                 Console.WriteLine();
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
@@ -52,9 +52,15 @@ namespace LinkedList
                         linkedlist.SearchValue(30);
                         break;
                     case 6:
-                        linkedlist.Display();
+                        linkedlist.Add(56);
+                        linkedlist.Add(30);
+                        linkedlist.Add(70);
+                        linkedlist.AdditionAfterElement(30,40);
                         break;
                     case 7:
+                        linkedlist.Display();
+                        break;
+                    case 8:
                         flag = false;
                         break;
                     default:
