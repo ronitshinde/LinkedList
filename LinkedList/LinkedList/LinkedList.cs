@@ -8,7 +8,6 @@ namespace LinkedList
 {
     public class LinkedList
     {
-        public Node head;
         public Node headNode;
         public void Add(int dataValue)
         {
@@ -63,6 +62,27 @@ namespace LinkedList
             }
             this.headNode = this.headNode.next;
             Console.WriteLine("The First Element Is Deleted");
+        }
+        public void RemoveLastNode()
+        {
+            if (headNode == null)
+            {
+                Console.WriteLine("Linked List Is Empty");
+            }
+            if (headNode.next == null)
+            {
+                headNode = null;
+            }
+            else
+            {
+                Node lastNode = this.headNode;
+                while (lastNode.next.next != null)
+                {
+                    lastNode = lastNode.next;
+                }
+                lastNode.next = null;
+                Console.WriteLine("The Last Element Is Deleted : " + lastNode.next);
+            }
         }
     }
 }
