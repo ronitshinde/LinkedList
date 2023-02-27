@@ -84,5 +84,27 @@ namespace LinkedList
                 Console.WriteLine("The Last Element Is Deleted : " + lastNode.next);
             }
         }
+        public void SearchValue(int value)
+        {
+            bool doesExists = false;
+            if (headNode != null)
+            {
+                int count = 0;
+                Node temp = headNode;
+                while (temp != null)
+                {
+                    if (temp.dataIn == value)
+                    {
+                        doesExists = true;
+                        count++;
+                    }
+                    temp = temp.next;
+                }
+                if (doesExists)
+                    Console.WriteLine($"{value} exists {count} times");
+                else
+                    Console.WriteLine($"{value} is not present in List");
+            }
+        }
     }
 }
