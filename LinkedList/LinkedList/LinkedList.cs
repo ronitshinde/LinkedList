@@ -13,13 +13,13 @@ namespace LinkedList
         public void Add(int dataValue)
         {
             Node node = new Node(dataValue);
-            if (this.head == null)
+            if (this.headNode == null)
             {
-                this.head = node;
+                this.headNode = node;
             }
             else
             {
-                Node temp = head;
+                Node temp = headNode;
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -43,7 +43,7 @@ namespace LinkedList
         }
         public void Display()
         {
-            Node temp = this.head;
+            Node temp = this.headNode;
             if (temp == null)
             {
                 Console.WriteLine("Linked List Is Empty");
@@ -54,6 +54,15 @@ namespace LinkedList
                 Console.WriteLine(temp.dataIn + " ");
                 temp = temp.next;
             }
+        }
+        public void RemoveFirstNode()
+        {
+            if (headNode == null)
+            {
+                Console.WriteLine("Linked List Is Empty");
+            }
+            this.headNode = this.headNode.next;
+            Console.WriteLine("The First Element Is Deleted");
         }
     }
 }
